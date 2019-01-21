@@ -341,35 +341,35 @@ $(document).ready(function() {
         }
         else {
 
-            // $.ajax({
-            //     url: "https://formspree.io/efsamaniego@me.com",
-            //     method: "POST",
-            //     data: $('#contactForm').serialize(),
-            //     dataType: "json",
-            //     // not working correctly fix this
-            //     success: function() {
-            //         // Message was sent
+            $.ajax({
+                url: "https://formspree.io/efsamaniego@me.com",
+                method: "POST",
+                data: $('#contactForm').serialize(),
+                dataType: "json",
+                // not working correctly fix this
+                success: function() {
+                    // Message was sent
 
-            //         console.log("form submitted");
+                    console.log("form submitted");
                     
-            //         $('.message-warning').fadeOut();
-            //         $('#contactForm').fadeOut();
-            //         $('.message-success').fadeIn();
+                    $('.message-warning').fadeOut();
+                    $('#contactForm').fadeOut();
+                    $('.message-success').fadeIn();
                     
 
 
 
-            //     },
+                },
 
-            //     error: function() {
+                error: function() {
 
-            //         sLoader.slideUp("slow");
-            //         $('.message-warning').html("Something went wrong. Please try again.");
-            //         $('.message-warning').slideDown("slow");
+                    // sLoader.slideUp("slow");
+                    $('.message-warning').html("Something went wrong. Please try again.");
+                    $('.message-warning').slideDown("slow");
 
-            //     }
+                }
 
-            // });
+            });
 
             $(this).get(0).reset();
         }
