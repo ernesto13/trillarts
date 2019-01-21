@@ -329,7 +329,7 @@ $(document).ready(function() {
 
 
     $("#contactForm").submit(function(event) {
-        // event.preventDefault();
+        event.preventDefault();
 
         if (name.value === "" || email.value === "" || message.value === "") {
             var sLoader = $('.submit-loader');
