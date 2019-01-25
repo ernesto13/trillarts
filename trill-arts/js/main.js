@@ -323,59 +323,92 @@ $(document).ready(function() {
 
     // for my contact form
 
+    // let name = document.getElementById("contactName");
+    // let email = document.getElementById("contactEmail");
+    // let message = document.getElementById("contactMessage");
+
+
+    // $("#contactForm").submit("click", function(event) {
+    //     event.preventDefault();
+
+    //     if (name.value === "" || email.value === "" || message.value === "") {
+            
+    //         var sLoader = $('.submit-loader');
+
+    //         sLoader.slideUp("slow");
+    //         $('.message-warning').html("Fill All Fields");
+    //         $('.message-warning').slideDown("slow");
+
+    //     }
+    //     else {
+
+    //         $.ajax({
+    //             url: "https://formspree.io/efsamaniego@me.com",
+    //             method: "POST",
+    //             data: $('#contactForm').serialize(),
+    //             dataType: "json",
+    //             // not working correctly fix this
+    //             success: function() {
+    //                 // Message was sent
+
+    //                 console.log("form submitted");
+                    
+    //                 $('.message-warning').fadeOut();
+    //                 $('#contactForm').fadeOut();
+    //                 $('.message-success').fadeIn();
+                    
+
+
+
+    //             },
+
+    //             error: function() {
+
+    //                 // sLoader.slideUp("slow");
+    //                 $('.message-warning').html("Something went wrong. Please try again.");
+    //                 $('.message-warning').slideDown("slow");
+
+    //             }
+
+    //         });
+
+    //         $(this).get(0).reset();
+    //     }
+
+    // });
+    
+    
+    
+    
+    // new form
+    
     let name = document.getElementById("contactName");
     let email = document.getElementById("contactEmail");
     let message = document.getElementById("contactMessage");
 
 
     $("#contactForm").submit("click", function(event) {
-        event.preventDefault();
 
         if (name.value === "" || email.value === "" || message.value === "") {
-            
-            var sLoader = $('.submit-loader');
 
-            sLoader.slideUp("slow");
-            $('.message-warning').html("Fill All Fields");
-            $('.message-warning').slideDown("slow");
+            // alertify.error('Fill out proper fields!');
+            event.preventDefault();
 
-        }
-        else {
-
+        } else {
             $.ajax({
                 url: "https://formspree.io/efsamaniego@me.com",
                 method: "POST",
                 data: $('#contactForm').serialize(),
-                dataType: "json",
-                // not working correctly fix this
-                success: function() {
-                    // Message was sent
-
-                    console.log("form submitted");
-                    
-                    $('.message-warning').fadeOut();
-                    $('#contactForm').fadeOut();
-                    $('.message-success').fadeIn();
-                    
-
-
-
-                },
-
-                error: function() {
-
-                    // sLoader.slideUp("slow");
-                    $('.message-warning').html("Something went wrong. Please try again.");
-                    $('.message-warning').slideDown("slow");
-
-                }
-
+                dataType: "json"
             });
 
-            $(this).get(0).reset();
-        }
+            $(this).get(0).reset()
+            // alertify.success('Thank You for your time!');
+            event.preventDefault();
 
+        }
     });
+    // end of form
 
     /* Animate On Scroll
      * ------------------------------------------------------ */
