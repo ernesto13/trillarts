@@ -398,7 +398,16 @@ $(document).ready(function() {
             $.ajax({
                 url: "https://formspree.io/efsamaniego@me.com",
                 method: "POST",
-                data: $('#contactForm').serialize(),
+                data: {
+                    
+                name:name,
+				_replyto:email,
+				 email:email,
+				comments:message,
+				_subject:'My Form Submission',
+                    
+                    
+                },
                 dataType: "json"
             });
 
