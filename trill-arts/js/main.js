@@ -329,9 +329,10 @@ $(document).ready(function() {
 
 
     $("#contactForm").submit(function(event) {
-        // event.preventDefault();
+        
 
         if (name.value === "" || email.value === "" || message.value === "") {
+            event.preventDefault();
             var sLoader = $('.submit-loader');
 
             sLoader.slideUp("slow");
