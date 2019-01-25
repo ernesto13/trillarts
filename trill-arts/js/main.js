@@ -403,12 +403,16 @@ $(document).ready(function() {
                 name:name,
 				_replyto:email,
 				 email:email,
-				comments:message,
-				_subject:'My Form Submission',
+				message:message,
+				_subject:'My Form Submission'
                     
                     
                 },
-                dataType: "json"
+                dataType: "json",
+                success:function() {
+				console.log('success');	
+				
+			    }
             });
 
             // $(this).get(0).reset()
