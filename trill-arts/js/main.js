@@ -411,7 +411,7 @@ $(document).ready(function() {
                 dataType: "json"
             });
 
-            $(this).get(0).reset()
+            // $(this).get(0).reset()
             // alertify.success('Thank You for your time!');
             event.preventDefault();
 
