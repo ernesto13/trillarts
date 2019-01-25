@@ -328,7 +328,7 @@ $(document).ready(function() {
     let message = document.getElementById("contactMessage");
 
 
-    $("#contactForm").submit(function(event) {
+    $("#contactForm").submit("click", function(event) {
         
 
         if (name.value === "" || email.value === "" || message.value === "") {
