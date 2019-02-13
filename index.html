@@ -729,21 +729,21 @@
 
                 <h3 class="h6">Send Me A Message</h3>
 
-                <form name="contactForm" id="contactForm">
+                <form name="contactForm" id="contactForm" action="https://formspree.io/esamaniego53@gmail.com" method="POST">
                     <fieldset>
 
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                            <input name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" aria-required="true" class="full-width" required>
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                            <input name="email" type="email" id="contactEmail" placeholder="Your Email" value=""  aria-required="true" class="full-width" required>
                         </div>
                         <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                            <input name="subject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
                             <input type="text" name="_gotcha" style="display:none" />
                         </div>
                         <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                            <textarea name="message" id="contactMessage" placeholder="Your Message" rows="10" cols="50" aria-required="true" class="full-width" required></textarea>
                         </div>
 
                         <div class="form-field">
