@@ -1,1 +1,4 @@
-# trillarts
+# TrillArts
+
+### A site for digital art 
+
